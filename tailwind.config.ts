@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				crypto: {
+					bitcoin: '#f7931a',
+					ethereum: '#627eea',
+					kaspa: '#70c7ba',
+					dogecoin: '#c2a633',
+					dark: '#0a0a0f',
+					darker: '#050508',
+					neon: '#00ff88',
+					blue: '#1e40af',
+					purple: '#7c3aed'
 				}
 			},
 			borderRadius: {
@@ -84,11 +96,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px rgba(0, 255, 136, 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px rgba(0, 255, 136, 0.6)'
+					}
+				},
+				'pulse-slow': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.5'
+					}
+				},
+				'mining': {
+					'0%': {
+						transform: 'translateX(-100%)'
+					},
+					'100%': {
+						transform: 'translateX(100%)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+				'mining': 'mining 2s linear infinite'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'crypto-gradient': 'linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #059669 100%)'
 			}
 		}
 	},
