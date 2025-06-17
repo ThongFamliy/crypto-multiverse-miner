@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
-import { Wand2, Equalizer, Zap, Music, Settings } from 'lucide-react';
+import { Wand2, Settings, Zap, Music, Sliders } from 'lucide-react';
 
 interface Effect {
   id: number;
@@ -74,7 +73,7 @@ export const EffectsRack = () => {
 
   const getEffectIcon = (type: string) => {
     switch (type) {
-      case 'equalizer': return <Equalizer className="h-4 w-4" />;
+      case 'equalizer': return <Sliders className="h-4 w-4" />;
       case 'dynamics': return <Zap className="h-4 w-4" />;
       case 'reverb': return <Music className="h-4 w-4" />;
       case 'delay': return <Settings className="h-4 w-4" />;
